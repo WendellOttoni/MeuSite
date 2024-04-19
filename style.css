@@ -153,7 +153,138 @@ section.sobre-mim .interface a {
     color: #fff;
     transition-duration: 0.2s;
     transform: scale(1.05);
+    filter: drop-shadow(1px 1px 20px);
+    box-shadow: none;
 }
+
+/*HABILIDADES*/
+section.habilidades .flex{
+    justify-content: center;
+    align-items: center;
+    padding: 40px 4%;
+    
+}
+
+.skills{
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    padding: 40px 4%;
+    border-radius: 20px;
+    background-color: #ffffff11;
+    box-shadow: 0 15px 20px #000000b9;
+}
+
+.skills h2{
+    text-align: center;
+    color: #cccccc;
+}
+.skills h3{
+    color: #cccccc;    
+}
+
+.skills ul{
+    list-style: none;
+}
+
+.skills ul li{
+    margin: 20px 0;
+}
+
+.skills .barras{
+    background-color: #cccccc;
+    display: block;
+    height: 20px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: .5s ease-in-out;
+}
+
+.barras > span{
+    height: 20px;
+    background: linear-gradient(to right, #fe4701, #ff0054);
+    position: absolute;
+}
+
+.delphi{
+    width: 60%;
+    animation: delphi 3s;
+}
+
+.python{
+    width: 50%;
+    animation: python 3s;
+}
+
+.html{
+    width: 30%;
+    animation: html 3s;
+}
+
+.css{
+    width: 30%;
+    animation: css 3s;
+}
+
+.csharp{
+    width: 45%;
+    animation: csharp 3s;
+}
+
+.sql{
+    width: 50%;
+    animation: sql 3s;
+}
+
+@keyframes delphi {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 60%;
+  }  
+}
+@keyframes python {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }  
+}
+@keyframes html {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 30%;
+  }  
+}
+@keyframes css {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 30%;
+  }  
+}
+@keyframes csharp {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 45%;
+  }  
+}
+@keyframes sql {
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 50%;
+    }  
+  }
 
 /*FOOTER*/
 
@@ -170,8 +301,9 @@ section.sobre-mim .interface a {
 .Made a:hover {
     color: #fff;
     transition-duration: 0.2s;
-    ;
 }
+
+
 
 @media screen and (max-width: 900px) {
 
@@ -187,7 +319,7 @@ section.sobre-mim .interface a {
     }
     
     .menu-mobile{
-        display: block;
+        display: block;  
     }
 
     .btn-abri-menu-mobile i{
@@ -229,6 +361,7 @@ section.sobre-mim .interface a {
         font-size: 20px;
         padding: 12px 4%;
     }
+    
     /*CABEÇALHO*/
     .menu-desktop, .btn-contato {
         display: none;
@@ -272,5 +405,9 @@ section.sobre-mim .interface a {
 
     .btn-social{
         text-align: center;
-    }    
+    }   
+    
+    .skills{
+        width: 100%;
+    }
 }

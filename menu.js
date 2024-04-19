@@ -8,3 +8,8 @@ btnMenu.addEventListener('click',() =>{
 menu.addEventListener('click',() =>{
     menu.classList.remove('abrir-menu')
 })
+
+function scrollParaSecao(idSecao) {
+    var secaoDestino = document.getElementById(idSecao);
+    secaoDestino.scrollIntoView({ behavior: "smooth" });
+}

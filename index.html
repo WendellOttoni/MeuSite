@@ -21,19 +21,19 @@
 <body>
     <header>
         <div class="interface">
-            <div class="logo">
+            <div class="logo" id="topo-site">
                 <label class="labellogo"><a href="index.html" target="_blank">Wendell Ottoni</a></label>
             </div><!--logo-->
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Especialidades</a></li>
+                    <li><a onclick="scrollParaSecao('topo-site')" href="#">Inicio</a></li>
+                    <li><a onclick="scrollParaSecao('skills')" href="#">Habilidades</a></li>
                     <li><a href="#">Projetos</i></a> </li>
                 </ul>
             </nav><!--menu-desktop-->
             <div class="btn-contato">
-                <a href="#">
+                <a href="https://www.linkedin.com/in/wendell-ottoni-de-carvalho-filho-450632196">
                     <button>Contato</button>
                 </a>
             </div><!--btn-contato-->
@@ -48,8 +48,8 @@
                </div> 
                <nav>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Especialidades</a></li>
+                    <li><a onclick="scrollParaSecao('topo-site')" href="#">Inicio</a></li>
+                    <li><a onclick="scrollParaSecao('skills')" href="#">Habilidades</a></li>
                     <li class="menu-drop-hover"><a href="#">Projetos</a></li>
                     <li><a href="">Contato</a></li>
                 </ul>
@@ -118,6 +118,34 @@
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--sobre-mim-->
+
+        <section class="habilidades">
+            <div class="flex">
+                <div class="skills" id="skills">
+                    <h2>Habilidades</h2>
+                    <ul>
+                        <li><h3>Delphi</h3>
+                            <span class="barras"><span class="delphi"></span></span>
+                        </li>
+                        <li><h3>Python</h3>
+                            <span class="barras"><span class="python"></span></span>
+                        </li>
+                        <li><h3>HTML</h3>
+                            <span class="barras"><span class="html"></span></span>
+                        </li>
+                        <li><h3>CSS</h3>
+                            <span class="barras"><span class="css"></span></span>
+                        </li>
+                        <li><h3>C#</h3>
+                            <span class="barras"><span class="csharp"></span></span>
+                        </li>
+                        <li><h3>SQL</h3>
+                            <span class="barras"><span class="sql"></span></span>
+                        </li>
+                    </ul>
+                </div><!--skills-->
+            </div><!--flex-->
+        </section><!--habilidades-->
     </main>
     <footer>
         <div class="interface">
