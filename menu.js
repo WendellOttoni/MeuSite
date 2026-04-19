@@ -92,14 +92,18 @@ async function loadProjects() {
 
     try {
         const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=100`)
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+
         const repos = await res.json()
+        if (!Array.isArray(repos)) throw new Error(repos.message || 'Resposta inválida')
 
         const filtered = repos.filter(r => !r.fork && !REPO_IGNORE.includes(r.name))
 
         grid.innerHTML = filtered.map(repo => {
             const lang = repo.language || '—'
             const color = langColors[lang] || langColors.default
-            const desc = repo.description || 'Sem descrição.'
+            const desc = (repo.description || 'Sem descrição.')
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
             return `
             <div class="project-card">
@@ -119,7 +123,7 @@ async function loadProjects() {
         }).join('')
 
     } catch (e) {
-        grid.innerHTML = '<p style="color:#777;padding:20px 4%">Não foi possível carregar os projetos.</p>'
+        grid.innerHTML = `<p style="color:#777;padding:20px 4%">Erro ao carregar projetos: ${e.message}</p>`
     }
 }
 
