@@ -19,71 +19,92 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="interface">
             <div class="logo" id="topo-site">
-                <label class="labellogo"><a href="index.html" target="_blank">Wendell Ottoni</a></label>
-            </div><!--logo-->
+                <label class="labellogo"><a href="index.html">Wendell Ottoni</a></label>
+            </div>
 
             <nav class="menu-desktop">
                 <ul>
                     <li><a onclick="scrollParaSecao('topo-site')" href="#">Inicio</a></li>
                     <li><a onclick="scrollParaSecao('skills')" href="#">Habilidades</a></li>
-                    <li><a href="#">Projetos</i></a> </li>
+                    <li><a onclick="scrollParaSecao('projetos')" href="#">Projetos</a></li>
                 </ul>
-            </nav><!--menu-desktop-->
+            </nav>
+
             <div class="btn-contato">
                 <a href="https://www.linkedin.com/in/wendell-ottoni-de-carvalho-filho-450632196" target="_blank">
                     <button>Contato</button>
                 </a>
-            </div><!--btn-contato-->
-            
+            </div>
+
             <div class="btn-abri-menu-mobile" id="abrir-menu">
                 <i class="bi bi-list"></i>
             </div>
 
             <div class="menu-mobile" id="menu-mobile">
-               <div class="btn-fechar">
-                    <i class="bi bi-x-lg"></i> 
-               </div> 
-               <nav>
-                <ul>
-                    <li><a onclick="scrollParaSecao('topo-site')" href="#">Inicio</a></li>
-                    <li><a onclick="scrollParaSecao('skills')" href="#">Habilidades</a></li>
-                    <li class="menu-drop-hover"><a href="#">Projetos</a></li>
-                    <li><a href="">Contato</a></li>
-                </ul>
-            </nav><!--menu-desktop-->
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a onclick="scrollParaSecao('topo-site')" href="#">Inicio</a></li>
+                        <li><a onclick="scrollParaSecao('skills')" href="#">Habilidades</a></li>
+                        <li><a onclick="scrollParaSecao('projetos')" href="#">Projetos</a></li>
+                        <li><a href="https://www.linkedin.com/in/wendell-ottoni-de-carvalho-filho-450632196" target="_blank">Contato</a></li>
+                    </ul>
+                </nav>
             </div>
-        </div><!--inteface-->
+        </div>
     </header>
+
     <main>
-        <section class="topo-do-site">
+        <section class="topo-do-site fade-in-up">
             <div class="interface">
-                <div class="flex">
+                <div class="flex hero-flex">
                     <div class="txt-topo-site">
-                        <h1>Bem-vindo ao meu mundo criativo,
-                            onde cada projeto é uma história de paixão e inovação.</h1>
+                        <span class="hero-tag">// desenvolvedor de software</span>
+                        <h1>Bem-vindo ao meu<br><span class="typed-text"></span><span class="cursor">|</span></h1>
                         <p>Com um olhar apurado para detalhes e uma paixão incessante,
                             estou sempre em busca de oportunidades que desafiem minha
                             criatividade e expandam minhas habilidades.
                             Comprometido com a entrega de soluções inovadoras,
                             estou pronto para contribuir e crescer junto à sua equipe.</p>
                         <div class="btn-contato">
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/wendell-ottoni-de-carvalho-filho-450632196" target="_blank">
                                 <button>Entre em contato</button>
                             </a>
-                        </div><!--btn-contato-->
-                    </div><!--txt-topo-site-->
-                </div><!--flex-->
-            </div><!--interface-->
-        </section><!--topo-do-site-->
+                        </div>
+                    </div>
 
-        <section class="sobre-mim">
+                    <div class="code-decoration">
+                        <div class="code-window">
+                            <div class="code-window-bar">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="code-block">
+                                <p><span class="c-keyword">const</span> dev = {</p>
+                                <p>&nbsp;&nbsp;nome: <span class="c-string">"Wendell Ottoni"</span>,</p>
+                                <p>&nbsp;&nbsp;cargo: <span class="c-string">"Dev Software"</span>,</p>
+                                <p>&nbsp;&nbsp;stack: [<span class="c-string">"Delphi"</span>, <span class="c-string">"Python"</span>, <span class="c-string">"C#"</span>],</p>
+                                <p>&nbsp;&nbsp;status: <span class="c-green">"disponível"</span></p>
+                                <p>}</p>
+                                <p class="code-cursor-line"><span class="c-keyword">&gt;</span> <span class="blink-cursor">_</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sobre-mim fade-in-up">
             <div class="interface">
                 <div class="flex">
                     <div class="sobre">
-                        <h2 class="titulo">Sobre Mim.</h2>
+                        <h2 class="titulo"><span class="accent-prefix">//</span> Sobre Mim.</h2>
                         <p>Olá, sou Wendell Ottoni de Carvalho Filho, um desenvolvedor de software
                             apaixonado por tecnologia e inovação. Graduado em Bacharelado em Sistemas de
                             Informação pela Unifimes, na cidade de Mineiros - GO, trago uma sólida
@@ -107,58 +128,115 @@
                             carreira sólida, contribuindo para o crescimento tanto pessoal quanto da empresa
                             em que estiver envolvido. Estou comprometido em continuar aprendendo e evoluindo,
                             buscando sempre novos desafios e oportunidades de desenvolvimento.</p>
-                        <div class="btn-social">
-                            <a href="https://www.instagram.com/wendell.ottoni"><button><i
-                                        class="bi bi-instagram"></i></button></a>
-                            <a href="https://www.linkedin.com/in/wendell-ottoni-de-carvalho-filho-450632196"><button><i
-                                        class="bi bi-linkedin"></i></button></a>
-                            <a href="https://github.com/WendellOttoni"><button><i class="bi bi-github"></i></button></a>
-                        </div><!--btn-social-->
-                    </div><!--sobre-->
-                </div><!--flex-->
-            </div><!--interface-->
-        </section><!--sobre-mim-->
 
-        <section class="habilidades">
+                        <div class="btn-social">
+                            <a href="https://www.instagram.com/wendell.ottoni" target="_blank">
+                                <button><i class="bi bi-instagram"></i></button>
+                            </a>
+                            <a href="https://www.linkedin.com/in/wendell-ottoni-de-carvalho-filho-450632196" target="_blank">
+                                <button><i class="bi bi-linkedin"></i></button>
+                            </a>
+                            <a href="https://github.com/WendellOttoni" target="_blank">
+                                <button><i class="bi bi-github"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="habilidades fade-in-up">
             <div class="flex">
                 <div class="skills" id="skills">
-                    <h2>Habilidades</h2>
+                    <h2><span class="accent-prefix">//</span> Habilidades</h2>
                     <ul>
-                        <li><h3>Delphi</h3>
+                        <li>
+                            <h3><i class="bi bi-code-slash"></i> Delphi</h3>
                             <span class="barras"><span class="delphi"></span></span>
                         </li>
-                        <li><h3>Python</h3>
+                        <li>
+                            <h3><i class="bi bi-filetype-py"></i> Python</h3>
                             <span class="barras"><span class="python"></span></span>
                         </li>
-                        <li><h3>HTML</h3>
+                        <li>
+                            <h3><i class="bi bi-filetype-html"></i> HTML</h3>
                             <span class="barras"><span class="html"></span></span>
                         </li>
-                        <li><h3>CSS</h3>
+                        <li>
+                            <h3><i class="bi bi-filetype-css"></i> CSS</h3>
                             <span class="barras"><span class="css"></span></span>
                         </li>
-                        <li><h3>C#</h3>
+                        <li>
+                            <h3><i class="bi bi-braces"></i> C#</h3>
                             <span class="barras"><span class="csharp"></span></span>
                         </li>
-                        <li><h3>SQL</h3>
+                        <li>
+                            <h3><i class="bi bi-database"></i> SQL</h3>
                             <span class="barras"><span class="sql"></span></span>
                         </li>
                     </ul>
-                </div><!--skills-->
-            </div><!--flex-->
-        </section><!--habilidades-->
-
-        <section class="projetos">
-            <div class="flex">
-                
+                </div>
             </div>
-        </section><!--projetos-->
+        </section>
+
+        <section class="projetos fade-in-up" id="projetos">
+            <div class="interface">
+                <h2 class="titulo"><span class="accent-prefix">//</span> Projetos</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="card-header">
+                            <i class="bi bi-folder2-open card-icon"></i>
+                            <a href="https://github.com/WendellOttoni" target="_blank" class="card-link">
+                                <i class="bi bi-arrow-up-right-square"></i>
+                            </a>
+                        </div>
+                        <h3>Este Portfólio</h3>
+                        <p>Site pessoal desenvolvido do zero com HTML, CSS e JavaScript. Design dark com identidade de desenvolvedor.</p>
+                        <div class="card-badges">
+                            <span class="badge">HTML</span>
+                            <span class="badge">CSS</span>
+                            <span class="badge">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <i class="bi bi-folder2-open card-icon"></i>
+                            <a href="#" class="card-link">
+                                <i class="bi bi-arrow-up-right-square"></i>
+                            </a>
+                        </div>
+                        <h3>Em breve</h3>
+                        <p>Novos projetos estão sendo preparados e serão adicionados em breve. Fique de olho!</p>
+                        <div class="card-badges">
+                            <span class="badge">...</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <i class="bi bi-folder2-open card-icon"></i>
+                            <a href="#" class="card-link">
+                                <i class="bi bi-arrow-up-right-square"></i>
+                            </a>
+                        </div>
+                        <h3>Em breve</h3>
+                        <p>Novos projetos estão sendo preparados e serão adicionados em breve. Fique de olho!</p>
+                        <div class="card-badges">
+                            <span class="badge">...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
         <div class="interface">
             <div class="made-by">
                 <p class="Made">Made by <a href="index.html">Wendell Ottoni.</a> Todos Direitos Reservados</p>
-            </div><!--made-by-->
-        </div><!--interface-->
+            </div>
+        </div>
     </footer>
 </body>
 
