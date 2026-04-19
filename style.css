@@ -710,7 +710,7 @@ section.contato {
 
 .contato-form input,
 .contato-form textarea {
-    background: #ffffff08;
+    background-color: #2a2a2a;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 10px;
     padding: 14px 18px;
@@ -720,6 +720,9 @@ section.contato {
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
     resize: vertical;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .contato-form input::placeholder,
@@ -756,23 +759,22 @@ section.contato {
 
 /* MODAL */
 .modal-overlay {
+    display: none;
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(6px);
     z-index: 200;
-    display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
 }
 
 .modal-overlay.active {
-    opacity: 1;
-    pointer-events: all;
+    display: flex;
 }
 
 .modal-box {
