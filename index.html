@@ -44,8 +44,9 @@
             </div>
 
             <div class="menu-mobile" id="menu-mobile">
-                <div class="btn-fechar">
-                    <i class="bi bi-x-lg"></i>
+                <div class="mobile-menu-header">
+                    <span class="mobile-logo">Wendell Ottoni</span>
+                    <i class="bi bi-x-lg btn-fechar-icon"></i>
                 </div>
                 <nav>
                     <ul>
@@ -182,49 +183,9 @@
         <section class="projetos fade-in-up" id="projetos">
             <div class="interface">
                 <h2 class="titulo"><span class="accent-prefix">//</span> Projetos</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="card-header">
-                            <i class="bi bi-folder2-open card-icon"></i>
-                            <a href="https://github.com/WendellOttoni" target="_blank" class="card-link">
-                                <i class="bi bi-arrow-up-right-square"></i>
-                            </a>
-                        </div>
-                        <h3>Este Portfólio</h3>
-                        <p>Site pessoal desenvolvido do zero com HTML, CSS e JavaScript. Design dark com identidade de desenvolvedor.</p>
-                        <div class="card-badges">
-                            <span class="badge">HTML</span>
-                            <span class="badge">CSS</span>
-                            <span class="badge">JavaScript</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-header">
-                            <i class="bi bi-folder2-open card-icon"></i>
-                            <a href="#" class="card-link">
-                                <i class="bi bi-arrow-up-right-square"></i>
-                            </a>
-                        </div>
-                        <h3>Em breve</h3>
-                        <p>Novos projetos estão sendo preparados e serão adicionados em breve. Fique de olho!</p>
-                        <div class="card-badges">
-                            <span class="badge">...</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-header">
-                            <i class="bi bi-folder2-open card-icon"></i>
-                            <a href="#" class="card-link">
-                                <i class="bi bi-arrow-up-right-square"></i>
-                            </a>
-                        </div>
-                        <h3>Em breve</h3>
-                        <p>Novos projetos estão sendo preparados e serão adicionados em breve. Fique de olho!</p>
-                        <div class="card-badges">
-                            <span class="badge">...</span>
-                        </div>
+                <div class="projects-grid" id="projects-grid">
+                    <div class="projects-loading">
+                        <span class="blink-cursor">_</span> carregando projetos...
                     </div>
                 </div>
             </div>

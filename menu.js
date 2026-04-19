@@ -6,7 +6,7 @@ btnMenu.addEventListener('click', () => {
     menu.classList.add('abrir-menu')
 })
 
-menu.addEventListener('click', () => {
+document.querySelector('.btn-fechar-icon')?.addEventListener('click', () => {
     menu.classList.remove('abrir-menu')
 })
 
@@ -72,3 +72,55 @@ function type() {
 }
 
 type()
+
+// Carrega projetos dinamicamente via GitHub API
+const GITHUB_USER = 'WendellOttoni'
+const REPO_IGNORE = [] // nomes de repos para ocultar, se quiser
+
+const langColors = {
+    JavaScript: '#f0db4f',
+    TypeScript: '#3178c6',
+    Python:     '#3572A5',
+    HTML:       '#e34c26',
+    CSS:        '#563d7c',
+    default:    '#fe4701'
+}
+
+async function loadProjects() {
+    const grid = document.getElementById('projects-grid')
+    if (!grid) return
+
+    try {
+        const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=100`)
+        const repos = await res.json()
+
+        const filtered = repos.filter(r => !r.fork && !REPO_IGNORE.includes(r.name))
+
+        grid.innerHTML = filtered.map(repo => {
+            const lang = repo.language || '—'
+            const color = langColors[lang] || langColors.default
+            const desc = repo.description || 'Sem descrição.'
+
+            return `
+            <div class="project-card">
+                <div class="card-header">
+                    <i class="bi bi-folder2-open card-icon"></i>
+                    <a href="${repo.html_url}" target="_blank" class="card-link">
+                        <i class="bi bi-arrow-up-right-square"></i>
+                    </a>
+                </div>
+                <h3>${repo.name}</h3>
+                <p>${desc}</p>
+                <div class="card-badges">
+                    <span class="badge" style="--lang-color:${color}">${lang}</span>
+                    ${repo.stargazers_count > 0 ? `<span class="badge badge-star"><i class="bi bi-star-fill"></i> ${repo.stargazers_count}</span>` : ''}
+                </div>
+            </div>`
+        }).join('')
+
+    } catch (e) {
+        grid.innerHTML = '<p style="color:#777;padding:20px 4%">Não foi possível carregar os projetos.</p>'
+    }
+}
+
+loadProjects()
